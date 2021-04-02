@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Insert a new Spring Boot Book</title>
+<link th:href="@{/styles.css}" rel="stylesheet" />
+</head>
+<body>
+	<h2>Insert New Spring Boot Book</h2>
+	<form th:object="${newBook}" th:action="@{/update/{id}(id=${newBook.id})}" method='POST'>
+		<table>
+			<tr><td>
+				<label for="name">Title: </label><input id="name" name="name" size="50" th:field="*{name}"><br/>
+			</td></tr>
+			<tr><td>
+				<label for="author">Author: </label><input id="author" name="author" size="30" th:field="*{author}"><br/>
+			</td></tr>
+			<tr><td>
+				<label for="publ">Publisher: </label><input id="publ" name="publisher" size="50" th:field="*{publisher}"><br/>
+			</td></tr>
+			<tr><td>
+				<label for="year">Publication Year: </label><input id="year" name="pubDate" size="4" th:field="*{pubDate}"><br/>
+			</td></tr>
+		</table>
+		<br />
+		<input name="submit" type="submit" value="submit" />
+	</form>
+	<br/>
+	<a href="../viewAll">View all Books</a>
+</body>
+</html>

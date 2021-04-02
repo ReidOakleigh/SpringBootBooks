@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Boot Books</title>
+    <link th:href="@{/styles.css}" rel="stylesheet" />
+</head>
+<body>
+<h2>Spring Boot Books</h2>
+<form>
+    <table>
+        <tr>
+            <th class="id">Id</th>
+            <th class="name">Book Name</th>
+            <th class="author">Author</th>
+            <th class="publ">Publisher</th>
+            <th class="date">Year</th>
+            <th class="action" th:colspan="2">Action</th>
+        </tr>
+        <tr th:each="book : ${books}">
+            <th th:class="id"     th:text="${book.id}"></th>
+            <th th:class="name"   th:text="${book.name}"></th>
+            <th th:class="author" th:text="${book.author}"></th>
+            <th th:class="publ"   th:text="${book.publisher}"></th>
+            <th th:class="date"   th:text="${book.pubDate}"></th>
+            <th th:class="action"><a th:href="@{/edit/{id}(id=${book.id})}">Edit</a></th>
+            <th th:class="action"><a th:href="@{/delete/{id}(id=${book.id})}">Delete</a></th>
+        </tr>
+    </table>
+</form>
+<br/>
+<a href="../inputBook">Add a new Spring Boot Book</a>
+
+</body>
+</html>

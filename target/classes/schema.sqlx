@@ -1,0 +1,9 @@
+drop table books if exists;
+create table books (
+      id bigint not null auto_increment,
+      name varchar(255),
+      author varchar(255),
+      publisher varchar(255),
+      pub_date varchar(4),
+      primary key(id)
+);

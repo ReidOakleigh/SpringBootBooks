@@ -1,0 +1,4 @@
+insert into books (name, author, publisher, pub_date) values ('Spring in Action, 5th ed.','Craig Walls','Manning Press','2018');
+insert into books (name, author, publisher, pub_date) values ('Spring Boot in Action','Craig Walls','Manning Press','2016');
+insert into books (name, author, publisher, pub_date) values ('Spring Boot Up & Running','Mark Heckler','O''Reilly Media','2021');
+insert into books (name, author, publisher, pub_date) values ('Learning Spring Boot 2.0, 2nd ed.','Greg L Turnquist','Packt Publishing','2017');

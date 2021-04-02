@@ -1,0 +1,12 @@
+	table, th, td {border: 1px solid black;}
+	table {border-collapse: collapse}
+	.st{text-align:center}
+	.id {width:3%; text-align: ccenter}
+	.name {width:35%; text-align:left}
+	.author {width:25%; text-align:left}
+	.publ {width:25%; text-align:left}
+	.year {width:2%; text-align:center}
+	.action {width:5%; text-align: center}
+	label {color:blue; display: block; width:115px; float: left}
+	h2 {color:blue}
+	input[type=submit] {background-color:blue; color:white; padding:5px 10px; margin:4px 2px}
